@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Proposal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff6b6b, #ff9ff3);
+      overflow-x: hidden;
+    }
+
+    .screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    #first-screen {
+      display: flex;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .screen-content {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .screen-content h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+    }
+
+    .screen-content p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    .screen-content button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #2196f3;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .screen-content button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(33, 150, 243, 0.6);
+    }
+
+    #second-screen {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .career-item {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 1rem;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .career-item:hover {
+      transform: scale(1.05);
+    }
+
+    .career-item img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 0.5rem;
+    }
+
+    .career-item p {
+      color: white;
+      font-weight: 600;
+    }
+
+    #attention-screen, #valentine-screen, #final-screen {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    }
+
+    .gif-container {
+      max-width: 300px;
+      max-height: 300px;
+      margin-bottom: 1rem;
+    }
+
+    .gif-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    .buttons button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    #yes-btn {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+
+    #no-btn {
+      background-color: #e74c3c;
+      color: #fff;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .buttons button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="first-screen" class="screen">
+    <div class="screen-content">
+      <h1>Computer Programming Project</h1>
+      <p>Made by Gene Ramirez</p>
+      <button onclick="showScreen('second-screen')">Next →</button>
+    </div>
+  </div>
+
+  <div id="second-screen" class="screen">
+    <div class="screen-content">
+      <h1>My Future Dreams</h1>
+      <div class="career-grid">
+        <div class="career-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <p>Future Pilot</p>
+        </div>
+        <div class="career-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"></path>
+            <path d="M7 7h.01"></path>
+          </svg>
+          <p>Aspiring Engineer</p>
+        </div>
+        <div class="career-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"></path>
+            <path d="M12 6v6l4 2"></path>
+          </svg>
+          <p>Dream to be a Nurse</p>
+        </div>
+      </div>
+      <button onclick="showScreen('attention-screen')">Next →</button>
+    </div>
+  </div>
+
+  <div id="attention-screen" class="screen">
+    <div class="screen-content">
+      <h1>Since I got your attention...</h1>
+      <div class="gif-container">
+        <img src="HAPPY CAT.gif" alt="Attention GIF">
+      </div>
+      <button onclick="showScreen('valentine-screen')">Next →</button>
+    </div>
+  </div>
+
+  <div id="valentine-screen" class="screen">
+    <div class="screen-content">
+      <h1>Will you be my Valentine?</h1>
+      <div class="buttons">
+        <button id="yes-btn" onclick="showScreen('final-screen')">Yes! 😊</button>
+        <button id="no-btn" onclick="handleNoClick()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="final-screen" class="screen">
+    <div class="screen-content">
+      <h1>YAYYY!!</h1>
+      <div class="gif-container">
+        <img src="cat-jump.gif" alt="Celebration GIF">
+      </div>
+      <p class="text-2xl mb-6">You made me the happiest person ever! ❤️</p>
+      <p>See you on 14!!</p>
+    </div>
+  </div>
+
+  <script>
+    const noResponses = [
+      "please :c",
+      "why :c",
+      "pretty please :c",
+      "don't break my heart :c",
+      "I'm sad :c"
+    ];
+    let noClickCount = 0;
+    let yesScale = 1;
+
+    function showScreen(screenId) {
+      document.querySelectorAll('.screen').forEach(screen => {
+        screen.style.display = 'none';
+      });
+      document.getElementById(screenId).style.display = 'flex';
+    }
+
+    function handleNoClick() {
+      noClickCount++;
+      yesScale += 0.2;
+      
+      const noBtn = document.getElementById('no-btn');
+      const yesBtn = document.getElementById('yes-btn');
+      
+      // Generate random translation
+      const maxTranslate = 50; // pixels
+      const translateX = (Math.random() * 2 - 1) * maxTranslate;
+      const translateY = (Math.random() * 2 - 1) * maxTranslate;
+      
+      // Apply transform to move the button
+      noBtn.style.transform = `translate(${translateX}px, ${translateY}px)`;
+      
+      // Increase "Yes" button size
+      yesBtn.style.transform = `scale(${yesScale})`;
+      
+      // Update button text
+      setTimeout(() => {
+        noBtn.textContent = `No (${noResponses[noClickCount % noResponses.length]})`;
+      }, 300);
+    }
+  </script>
+</body>
+</html>
